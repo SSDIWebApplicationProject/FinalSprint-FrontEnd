@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-6">
+    <img src = "{{imageURL}}" height="300px" width="600px">
+  </div>
+  <div class="col-6">
+<ul>
+  <li><h2 class="col"><b class="color1">Hotel Name:</b> {{roomName}}</h2></li>
+  <li><h2 class="col"><b class="color1">Distance from airport:</b> {{distanceFromAirport}}</h2></li>
+  <li><h2 class="col"><b class="color1">No Of Bedrooms:</b> {{noOfBedrooms}}</h2></li>
+  <li><h2 class="col"><b class="color1">No Of Bathrooms:</b> {{noOfBathrooms}}</h2></li>
+  <li><h2 class="col"><b class="color1">Cost Per Day:</b> {{costPerDay}}$ </h2></li>
+  <li><h2 class="col"><b class="color1">Trip Duration:</b>  {{tripDuration}} days</h2></li>
+  <li><h1 class="col"><b class="color1">Total Cost:</b>  {{totalCost}}$</h1></li>
+
+</ul>
+  </div>
+
+
+</div>
+
+<button type="submit"   class="Searchbutton" routerLink="/payment" (click)="sendTotal()" >Continue to Payment</button>
+

@@ -1,0 +1,38 @@
+
+<div class="formdiv">
+
+  <form #f="ngForm">
+
+
+    <table class=hometable>
+
+      <tr>
+        <td class="op">Where to go?</td>
+        <td class="ip">
+          <select class="dd" name=city [(ngModel)]="search.city" required>
+            <option value="Select">Select</option>
+            <option *ngFor="let city of cities">{{city}}</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="op">Trip Duration:</td>
+        <td class="ip">
+          <input type="text" class="form-control" placeholder="Trip Duration" name="tripDuration"
+                 bsDaterangepicker [(ngModel)]="tripDuration" required [minDate]="minDate" [maxDate]="maxDate"></td>
+      </tr>
+      <tr>
+        <td class="op">No of Guests:</td>
+        <td class="ip">
+          <input type="number"  name="noofGuests" [(ngModel)]="search.noofGuests"  required min="1"></td>
+
+      </tr>
+    </table>
+
+    <div class=but>
+      <button  class="Searchbutton" type="submit" [disabled]="!f.valid" (click)="searchValue(); accessDate()"  routerLink="/searchroom" >Search</button>
+    </div>
+  </form>
+
+
+</div>

@@ -1,0 +1,33 @@
+
+<div>
+  <h1>Personal Info</h1>
+
+  <form #f="ngForm">
+    <table class=hometable>
+
+      <tr>
+        <td class="op">First Name</td>
+        <td class="ip">
+          <input type="text" name="firstName" required [(ngModel)]="userinfo.firstName" ></td>
+      </tr>
+      <tr>
+        <td class="op">Last Name</td>
+        <td class="ip">
+          <input type="text" name="lName" required [(ngModel)]="userinfo.lastName" ></td>
+      </tr>
+      <tr>
+        <td class="op">Email</td>
+        <td class="ip">
+          <input type="email" name="email" required   email [(ngModel)]="userinfo.emailId"  ></td>
+      </tr>
+      <tr>
+        <td class="op">Phone Number</td>
+        <td class="ip">
+          <input type="number" name="phone" required [(ngModel)]="userinfo.phoneNumber"  ></td>
+      </tr>
+    </table>
+    <button type="submit" [disabled]="!f.valid"  class="Searchbutton" (click)="RegisterUser()"  routerLink="/TandC">Register</button>
+  </form>
+
+</div>
+

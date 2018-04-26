@@ -1,0 +1,41 @@
+<h1>Please provide payment details</h1>
+<div class="formdiv">
+
+  <form #f="ngForm">
+
+
+    <table class=hometable>
+
+      <tr>
+        <td class="op">Student ID</td>
+
+        <td class="ip">
+          <input type="number"  name="id" [(ngModel)]="payment.studentId"  required min="800000000"></td>
+      </tr>
+      <tr>
+        <td class="op">Email ID</td>
+
+        <td class="ip">
+          <input type="email"  name="emailid" [(ngModel)]="payment.emailId"  required email></td>
+      </tr>
+      <tr>
+        <td class="op">Card No</td>
+
+        <td class="ip">
+          <input type="text"  name="cardno" [(ngModel)]="payment.cardNo"  required ></td>
+      </tr>
+      <tr>
+        <td class="op">Payment Amount:</td>
+        <td class="ip">{{this.totalcost}}</td>
+
+      </tr>
+    </table>
+
+
+  </form>
+  <div class=but>
+    <button  class="Paybutton" type="submit" [disabled]="!f.valid" (click)="validate()"  >PayNow</button>
+  </div>
+
+
+</div>

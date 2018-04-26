@@ -1,0 +1,25 @@
+{
+	"/search": {
+		"target": "http://localhost:8080",
+		"secure": false
+	},
+
+    "/city": {
+      "target": "http://localhost:8080",
+      "secure": false
+    },
+
+  "/room": {
+    "target": "http://localhost:8080",
+    "secure": false
+  },
+
+  "/user": {
+    "target": "http://localhost:8080",
+    "secure": false
+  },
+  "/payment": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+}
