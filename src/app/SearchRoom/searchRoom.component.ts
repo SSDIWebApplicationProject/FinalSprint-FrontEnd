@@ -26,11 +26,11 @@ export class SearchRoomComponent implements OnInit {
   private searchURL = 'http://localhost:4200/rooms';
 
   ngOnInit() {
-    this.SerachRoom();
+    this.searchRoom();
 
 
   }
-  SerachRoom() {
+  searchRoom() {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     /*const body = JSON.stringify(this.search, {headers: headers});*/
